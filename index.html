@@ -4,6 +4,27 @@
   
 <title>vane0621</title>
   
+<head>
+	<script>
+    function time()
+    {
+		var date = new Date();
+		var year = date.getFullYear();
+		var month = date.getMonth()+1;
+		var day = date.getDate();
+		var hour =date.getHours();
+		hour=hour<10?"0"+hour:hour;
+		var minute =date.getMinutes();
+		minute=minute<10?"0"+minute:minute;
+		var second = date.getSeconds();
+		second=second<10?"0"+second:second;
+		var currentTime = year+"-"+month+"-"+day+" "+hour+":"+minute+":"+second;
+		document.getElementById("time").innerHTML=currentTime;
+	}
+		setInterval("time()",1000);
+	</script>
+</head>
+	
 <body style="background-color:#F7EDE2">
 
 <h1 style="font-family:verdana;color:#84A59D">Hello!</h1>
@@ -25,7 +46,7 @@ Lofter</a> -- 是个人爱好自留地。
 <hr />
 
 <p>A time zone:</p>
-<img src="https://i2.wp.com/knowledgestew.com/wp-content/uploads/2016/02/world-time_3.jpg" width="550" height="350" />
+<img src="https://i2.wp.com/knowledgestew.com/wp-content/uploads/2016/02/world-time_3.jpg" width="1100" height="700" />
 
   <style>
 #header {
@@ -36,7 +57,7 @@ Lofter</a> -- 是个人爱好自留地。
 }
 #nav {
     line-height:70px;
-    background-color:#F7EDE2;
+    background-color:white;
     color:#84A59D;
     height:300px;
     width:200px;
@@ -46,9 +67,19 @@ Lofter</a> -- 是个人爱好自留地。
 }
 #section {
 	color:#84A59D;
-    width:800px;
+    width:600px;
     float:left;
     padding:10px;	 	 
+}
+#rt {
+    line-height:70px;
+    background-color:white;
+    color:#84A59D;
+    height:300px;
+    width:200px;
+    float:left;
+    text-align:center;
+    padding:10px;	      
 }
 #footer {
     background-color:#84A59D;
@@ -63,11 +94,11 @@ Lofter</a> -- 是个人爱好自留地。
 <body>
 
 <div id="header">
-<h1>HELLO!</h1>
+<h1>ABOUT TIME ZONE!</h1>
 </div>
 
 <div id="nav">
-<big>Time zone :</big>
+<h2>Time zone :</h2>
 </div>
 
 <div id="section">
@@ -89,14 +120,18 @@ China Standard Time
 <br />
 UTC+8
 </p>
-
+	
+<div id="rt">
+<p>
+<span id="time"></span>
+</p>
+</div>
 
 </div>
 
 <div id="footer">
 2022 / 7 / 21
 </div>
-  
   
 </body>
 </html>
